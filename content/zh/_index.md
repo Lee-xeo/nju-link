@@ -192,6 +192,32 @@ sections:
                     <div class="teacher-research"><strong>研究方向：</strong>大语言模型和多模态大模型的预训练、对齐、代码智能、评估等</div>
                   </div>
                 </div>
+                <div class="teacher-card">
+                  <a href="https://yuxiangren.github.io/" target="_blank">
+                    <img src="author/yuxiang-ren/avatar.jpg" alt="任宇翔助理教授" class="teacher-photo">
+                  </a>
+                  <div class="teacher-info">
+                    <h4>任宇翔 助理教授</h4>
+                    <div class="teacher-title">博士生导师</div>
+                    <div class="teacher-bio"><strong>南京大学智能科学与技术学院</strong>准聘助理教授、特聘研究员，曾通过华为<strong>“天才少年”</strong>计划加入华为2012实验室中央研究院任图计算研究员（2022–2025）。
+                      <br>2021年于佛罗里达州立大学获计算机科学博士学位（导师 Prof. Jiawei Zhang），2017年于伍斯特理工学院获计算机科学硕士学位，2015年于南京大学获工学与法学双学士学位。已在TKDE、ICDE、NeurIPS、AAAI、KDD等期刊会议发表论文三十余篇。</br>
+                    </div>
+                    <div class="teacher-research"><strong>研究方向：</strong>AI4Science、图计算、多模态科学大模型、端侧Agent</div>
+                  </div>
+                </div>
+                <div class="teacher-card">
+                  <a href="https://cszhangzhen.github.io/" target="_blank">
+                    <img src="author/zhen-zhang/avatar.jpg" alt="张震助理教授" class="teacher-photo">
+                  </a>
+                  <div class="teacher-info">
+                    <h4>张震 助理教授</h4>
+                    <div class="teacher-title">博士生导师</div>
+                    <div class="teacher-bio"><strong>南京大学智能科学与技术学院</strong>准聘助理教授、特聘研究员。2021年博士毕业于浙江大学，曾任新加坡国立大学高级博士后（与 Prof. Bingsheng He 合作）。
+                      <br>在NeurIPS、SIGKDD、WWW、TKDE、IJCAI等CCF-A类会议/期刊发表一作及通讯论文逾10篇，谷歌学术引用超1100次，曾获浙江省2021年优秀博士论文提名。担任ICLR、NeurIPS领域主席（AC），IJCAI高级程序委员（SPC）。</br>
+                    </div>
+                    <div class="teacher-research"><strong>研究方向：</strong>图数据挖掘、图神经网络、LLM Agent、AI4Science</div>
+                  </div>
+                </div>
             </div>
           </div>
   

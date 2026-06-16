@@ -192,6 +192,32 @@ sections:
                     <div class="teacher-research"><strong>Research Areas:</strong> Pre-training, alignment, code intelligence, and evaluation of large language models and multimodal large models</div>
                   </div>
                 </div>
+                <div class="teacher-card">
+                  <a href="https://yuxiangren.github.io/" target="_blank">
+                    <img src="author/yuxiang-ren/avatar.jpg" alt="Asst. Prof. Yuxiang Ren" class="teacher-photo">
+                  </a>
+                  <div class="teacher-info">
+                    <h4>Asst. Prof. Yuxiang Ren</h4>
+                    <div class="teacher-title">PhD Supervisor</div>
+                    <div class="teacher-bio">Tenure-track Assistant Professor at the <strong>School of Intelligence Science and Technology, Nanjing University</strong>. Previously a Graph Computing Researcher at Huawei's 2012 Labs Central Research Institute (2022–2025), recruited through Huawei's <strong>"Genius Youth" (天才少年)</strong> program.
+                      <br>He received his Ph.D. from Florida State University in 2021 (advised by Prof. Jiawei Zhang), his M.S. from Worcester Polytechnic Institute in 2017, and his B.Eng. and LL.B. from Nanjing University in 2015. He has published over 30 papers in venues such as TKDE, ICDE, NeurIPS, AAAI, and KDD.</br>
+                    </div>
+                    <div class="teacher-research"><strong>Research Areas:</strong> AI4Science, graph computing, multi-modal scientific large models, and on-device agents</div>
+                  </div>
+                </div>
+                <div class="teacher-card">
+                  <a href="https://cszhangzhen.github.io/" target="_blank">
+                    <img src="author/zhen-zhang/avatar.jpg" alt="Asst. Prof. Zhen Zhang" class="teacher-photo">
+                  </a>
+                  <div class="teacher-info">
+                    <h4>Asst. Prof. Zhen Zhang</h4>
+                    <div class="teacher-title">PhD Supervisor</div>
+                    <div class="teacher-bio">Tenure-track Assistant Professor at the <strong>School of Intelligence Science and Technology, Nanjing University</strong>. He received his Ph.D. from Zhejiang University in 2021 (advised by Prof. Jiajun Bu) and was a Research Fellow at the National University of Singapore (with Prof. Bingsheng He) before joining NJU.
+                      <br>He has published more than 10 first-author and corresponding-author papers in CCF-A venues including NeurIPS, SIGKDD, WWW, TKDE, and IJCAI, with over 1,100 Google Scholar citations. He serves as an Area Chair for ICLR and NeurIPS and a Senior PC member for IJCAI.</br>
+                    </div>
+                    <div class="teacher-research"><strong>Research Areas:</strong> Graph data mining, graph neural networks, LLM agents, and AI4Science</div>
+                  </div>
+                </div>
             </div>
           </div>
   
