@@ -4,10 +4,8 @@ env:
   WC_HUGO_VERSION: '0.135.0'
 
 on:
-  # Trigger the workflow every time you push to the `main` branch
-  push:
-    branches: ["main"]
-  # Allows you to run this workflow manually from the Actions tab on GitHub.
+  # 已停用：本站点改为通过 deploy.yml 部署到自有服务器（/www/wwwroot/nju-link.com）。
+  # 原先的 push 触发已移除，仅保留手动触发，以便需要时仍可发布到 GitHub Pages。
   workflow_dispatch:
 
 # Provide permission to clone the repo and deploy it to GitHub Pages

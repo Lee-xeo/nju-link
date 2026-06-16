@@ -1,0 +1,87 @@
+name: Build and deploy to server
+
+# 推送到 main 时自动构建 Hugo 并通过 rsync 镜像同步到生产服务器。
+# 取代了原先手动 “hugo + 复制 public/ 到 /www/wwwroot/nju-link.com” 的流程。
+
+on:
+  push:
+    branches: ["main"]
+  workflow_dispatch:
+
+# 同一时间只允许一个部署在跑，避免并发覆盖
+concurrency:
+  group: "deploy-server"
+  cancel-in-progress: false
+
+permissions:
+  contents: read
+
+env:
+  HUGO_VERSION: "0.135.0"
+  HUGO_CACHEDIR: /tmp/hugo_cache
+  # 服务器信息（非敏感）。私钥放在仓库 Secret: DEPLOY_SSH_KEY
+  SSH_HOST: "39.107.254.228"
+  SSH_USER: "root"
+  REMOTE_PATH: "/www/wwwroot/nju-link.com"
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          # Hugo 的 .GitInfo / .Lastmod 需要完整历史
+          fetch-depth: 0
+
+      - name: Setup Hugo
+        uses: peaceiris/actions-hugo@v3
+        with:
+          hugo-version: ${{ env.HUGO_VERSION }}
+          extended: true
+
+      - name: Cache Hugo modules & resources
+        uses: actions/cache@v4
+        with:
+          path: ${{ env.HUGO_CACHEDIR }}
+          key: ${{ runner.os }}-hugomod-${{ hashFiles('**/go.mod', '**/go.sum') }}
+          restore-keys: |
+            ${{ runner.os }}-hugomod-
+
+      - name: Build with Hugo
+        env:
+          HUGO_ENVIRONMENT: production
+          HUGO_ENV: production
+        run: hugo --gc --minify
+
+      - name: Deploy to server via rsync
+        env:
+          DEPLOY_SSH_KEY: ${{ secrets.DEPLOY_SSH_KEY }}
+        run: |
+          set -euo pipefail
+
+          # 写入部署私钥
+          install -d -m 700 ~/.ssh
+          printf '%s\n' "$DEPLOY_SSH_KEY" > ~/.ssh/deploy_key
+          chmod 600 ~/.ssh/deploy_key
+
+          # 固定服务器主机指纹（避免运行时 TOFU），验证我们连的就是这台机器
+          printf '%s\n' "39.107.254.228 ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIGdcmnP5KT8wyZsjcQwju4WmCnbllKh8499s+wQr7iJk" > ~/.ssh/known_hosts
+          chmod 644 ~/.ssh/known_hosts
+
+          # 镜像同步 public/ -> 服务器站点根目录
+          #  --delete            删除服务器上已不在 public/ 中的旧文件
+          #  --chown=www:www     保持 Web 用户属主（与宝塔一致）
+          #  --exclude           保护服务器自有文件，不传输也不删除：
+          #                        .user.ini  (宝塔 PHP 配置，且被设为 immutable)
+          #                        .htaccess  (服务器侧 Web 配置)
+          #                        .well-known (SSL/ACME 证书校验目录)
+          rsync -avz --delete \
+            --chown=www:www \
+            --exclude='.user.ini' \
+            --exclude='.htaccess' \
+            --exclude='.well-known' \
+            -e "ssh -i ~/.ssh/deploy_key -o StrictHostKeyChecking=yes -o UserKnownHostsFile=$HOME/.ssh/known_hosts" \
+            public/ "$SSH_USER@$SSH_HOST:$REMOTE_PATH/"
+
+          echo "✅ Deployed to $SSH_USER@$SSH_HOST:$REMOTE_PATH"
