@@ -24,7 +24,7 @@ role: 硕士研究生
 
 # User groups (for People widget)
 user_groups:
-  - Grad Students
+  - 硕士研究生
 
 # Organizations/Affiliations to display in Biography blox
 organizations:

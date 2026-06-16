@@ -24,7 +24,7 @@ role: Professor, PhD Supervisor
 
 # User groups (for People widget)
 user_groups:
-  - Principal Investigators
+  - 导师
 
 # Organizations/Affiliations to display in Biography blox
 organizations:
