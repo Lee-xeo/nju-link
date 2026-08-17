@@ -218,6 +218,19 @@ sections:
                     <div class="teacher-research"><strong>Research Areas:</strong> Graph data mining, graph neural networks, LLM agents, and AI4Science</div>
                   </div>
                 </div>
+                <div class="teacher-card">
+                  <a href="https://yuchang97.github.io/" target="_blank">
+                    <img src="author/chang-yu/avatar.jpg" alt="Asst. Prof. Chang Yu" class="teacher-photo">
+                  </a>
+                  <div class="teacher-info">
+                    <h4>Asst. Prof. Chang Yu</h4>
+                    <div class="teacher-title">Research Fellow</div>
+                    <div class="teacher-bio">Tenure-track Assistant Professor and Research Fellow at the <strong>School of Intelligence Science and Technology, Nanjing University</strong>. Ph.D. from the Institute of Automation, Chinese Academy of Sciences in 2024, advised by <strong>Prof. Zhen Lei (IEEE Fellow)</strong>, followed by postdoctoral research at Westlake University with <strong>Chair Prof. Stan Z. Li (IEEE Fellow)</strong>.
+                      <br>Principal investigator of a China Postdoctoral Science Foundation General Program project, among others, with papers published at top venues including ICLR, ICML, CVPR, and IEEE TPAMI — more than 10 of them as first author or co-corresponding author. A representative work received an <strong>ICML 2026 Oral (Top 0.7%)</strong>.</br>
+                    </div>
+                    <div class="teacher-research"><strong>Research Areas:</strong> AI for Science, world models, and virtual cell</div>
+                  </div>
+                </div>
             </div>
           </div>
   

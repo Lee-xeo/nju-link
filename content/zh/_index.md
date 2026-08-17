@@ -218,6 +218,19 @@ sections:
                     <div class="teacher-research"><strong>研究方向：</strong>图数据挖掘、图神经网络、LLM Agent、AI4Science</div>
                   </div>
                 </div>
+                <div class="teacher-card">
+                  <a href="https://yuchang97.github.io/" target="_blank">
+                    <img src="author/chang-yu/avatar.jpg" alt="于畅助理教授" class="teacher-photo">
+                  </a>
+                  <div class="teacher-info">
+                    <h4>于畅 助理教授</h4>
+                    <div class="teacher-title">特聘研究员</div>
+                    <div class="teacher-bio"><strong>南京大学智能科学与技术学院</strong>准聘助理教授、特聘研究员。2024年博士毕业于中国科学院自动化研究所，师从<strong>雷震研究员（IEEE Fellow）</strong>；后于西湖大学从事博士后研究，与<strong>李子青教授（IEEE Fellow）</strong>合作。
+                      <br>主持博士后面上项目等，在ICLR、ICML、CVPR、IEEE TPAMI等国际顶级会议/期刊发表多篇论文，其中第一作者/共同通讯作者10余篇。代表性工作获<strong>ICML 2026 Oral（Top 0.7%）</strong>。</br>
+                    </div>
+                    <div class="teacher-research"><strong>研究方向：</strong>科学智能、世界模型、虚拟细胞</div>
+                  </div>
+                </div>
             </div>
           </div>
   
